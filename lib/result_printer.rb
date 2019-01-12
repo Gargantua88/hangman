@@ -5,7 +5,7 @@ class ResultPrinter
     counter = 0
 
     while counter <= 7
-      file_name = current_path + "/image/#{counter}.txt"
+      file_name = current_path + "/../image/#{counter}.txt"
 
       begin
         file = File.new(file_name, "r:UTF-8")

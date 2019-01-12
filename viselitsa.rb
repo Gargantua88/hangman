@@ -9,11 +9,11 @@ if Gem.win_platform?
   end
 end
 
-require_relative "game"
-require_relative "result_printer"
-require_relative "word_reader"
+require_relative "lib/game"
+require_relative "lib/result_printer"
+require_relative "lib/word_reader"
 
-puts "Игра виселица. Версия 3.1.1"
+puts "Игра виселица. Версия 3.1.2"
 sleep 1
 
 printer = ResultPrinter.new
