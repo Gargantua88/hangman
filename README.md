@@ -8,7 +8,6 @@
 
 Для корректной работы требуется Ruby v. 2.4.1 или выше
 
-### HEAD
 Список загадываемых слов хранится в *data/words.txt*. Чтобы расширить словарный запас программы, просто добавьте туда больше слов.
 
 [![Пример запуска](https://asciinema.org/a/qpMKnvptNe5LPgivUuyaHmVht.svg)](https://asciinema.org/a/qpMKnvptNe5LPgivUuyaHmVht?autoplay=1)
