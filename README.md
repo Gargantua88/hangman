@@ -8,17 +8,13 @@
 
 Для корректной работы требуется Ruby v. 2.4.1 или выше
 
-<<<<<<< HEAD
+### HEAD
 Список загадываемых слов хранится в *data/words.txt*. Чтобы расширить словарный запас программы, просто добавьте туда больше слов.
 
-![Пример](https://asciinema.org/a/qpMKnvptNe5LPgivUuyaHmVht.svg)
+[![Пример запуска](https://asciinema.org/a/qpMKnvptNe5LPgivUuyaHmVht.svg)](https://asciinema.org/a/qpMKnvptNe5LPgivUuyaHmVht?autoplay=1)
 
 ### Автор
-Игорь Строганов
-
-=======
-Список загадываемых слов хранятся в *data/words.txt*. Чтобы расширить словарный запас программы, просто добавьте туда больше слов.
->>>>>>> d3c2d319f2f65991fbaa46957fd40ce6d1da8a61
+Ваш покорнейший слуга.
 
 ### Лицензия
 
