@@ -7,7 +7,7 @@ class Game
     @good_letters = []
     @bad_letters = []
 
-    @status = 0
+    @status = :in_progress
   end
 
   def get_letters(slovo)
@@ -19,7 +19,7 @@ class Game
   end
 
   def next_step(bukva)
-    return if @status == -1 || @status == 1
+    return unless @status == :in_progress
 
     # Если введенная буква уже есть в списке "правильных" или "ошибочных" букв,
     # то ничего не изменилось, выходим из метода.
@@ -34,13 +34,13 @@ class Game
       @good_letters << bukva
       add_similar_letters(bukva, good_letters)
 
-      @status = 1 if (@letters.uniq.sort - @good_letters.uniq.sort).empty?
+      @status = :win if (@letters.uniq.sort - @good_letters.uniq.sort).empty?
     else
       @bad_letters << bukva
       add_similar_letters(bukva, bad_letters)
       @errors += 1
       # Если ошибок больше 7 — статус игры меняем на -1, проигрыш.
-      @status = -1 if @errors >= 7
+      @status = :lose if @errors >= 7
     end
   end
 

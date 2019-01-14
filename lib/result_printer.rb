@@ -34,12 +34,12 @@ class ResultPrinter
 
     print_viselitsa(game.errors)
 
-    if game.status == -1
+    if game.status == :lose
       puts
       puts "Вы проиграли :("
       puts "Загаданное слово было: " + game.letters.join("")
       puts
-    elsif game.status == 1
+    elsif game.status == :win
       puts
       puts "Поздравляем, вы выиграли!"
       puts

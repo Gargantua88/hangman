@@ -23,7 +23,7 @@ words_file_name = File.dirname(__FILE__) + "/data/words.txt"
 
 game = Game.new(word_reader.read_from_file(words_file_name))
 
-while game.status.zero?
+while game.status == :in_progress
   printer.print_status(game)
   game.ask_next_letter
 end
