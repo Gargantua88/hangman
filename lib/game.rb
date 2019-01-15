@@ -1,3 +1,4 @@
+require 'unicode_utils/upcase'
 class Game
   attr_reader :status, :errors, :letters, :good_letters, :bad_letters
 
@@ -15,7 +16,7 @@ class Game
       abort "Загадано пустое слово, нечего отгадывать. Закрываемся"
     end
 
-    slovo.encode('UTF-8').downcase.split("")
+    UnicodeUtils.upcase(slovo).split("")
   end
 
   def next_step(bukva)
@@ -26,10 +27,10 @@ class Game
     return if @good_letters.include?(bukva) || @bad_letters.include?(bukva)
 
     if @letters.include?(bukva) ||
-     (bukva == "е" && letters.include?("ё")) ||
-     (bukva == "ё" && letters.include?("е")) ||
-     (bukva == "и" && letters.include?("й")) ||
-     (bukva == "й" && letters.include?("и"))
+     (bukva == "Е" && letters.include?("Ё")) ||
+     (bukva == "Ё" && letters.include?("Е")) ||
+     (bukva == "И" && letters.include?("Й")) ||
+     (bukva == "Й" && letters.include?("И"))
 
       @good_letters << bukva
       add_similar_letters(bukva, good_letters)
@@ -49,10 +50,7 @@ class Game
     puts "\nВведите следующую букву"
 
     letter = ""
-
-    while letter == ""
-      letter = STDIN.gets.encode("UTF-8").chomp.downcase
-    end
+    letter = UnicodeUtils.upcase(STDIN.gets.encode("UTF-8").chomp) while letter == ""
     # После получения ввода, передаем управление в основной метод игры
     next_step(letter)
   end
@@ -60,10 +58,10 @@ class Game
   # Метод проверки и добавления похожих букв в массивы отгаданных и ошибочных
   def add_similar_letters(letter, array)
     case letter
-    when "е" then array << "ё"
-    when "ё" then array << "е"
-    when "и" then array << "й"
-    when "й" then array << "и"
+    when "Е" then array << "Ё"
+    when "Ё" then array << "Е"
+    when "И" then array << "Й"
+    when "Й" then array << "И"
     end
   end
 end
