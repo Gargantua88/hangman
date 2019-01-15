@@ -1,11 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    unicode_utils (1.4.0)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
+  unicode_utils
 
 BUNDLED WITH
    2.0.1
