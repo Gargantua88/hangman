@@ -16,6 +16,9 @@ $ ruby main.rb
 
 Список загадываемых слов хранится в *data/words.txt*. Чтобы расширить словарный запас программы, просто добавьте туда больше слов.
 
+### Наглядный пример запуска
+[![Пример запуска](https://asciinema.org/a/vaIXBysGVkqNdcoEpxspZnzmw.svg)](https://asciinema.org/a/vaIXBysGVkqNdcoEpxspZnzmw?autoplay=1)
+
 ### Автор
 Ваш покорнейший слуга.
 
